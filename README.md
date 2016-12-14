@@ -1,9 +1,8 @@
-# RakeScheduler
+# Rake Scheduler
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/rake_scheduler`. To experiment with that code, run `bin/console` for an interactive prompt.
+Heroku Scheduler is an add-on for running jobs on your app at scheduled time intervals, much like cron in a traditional server environment. Run scheduled tasks every ```10 minutes```, ```every hour```, or ```every day```. 
 
-TODO: Delete this and the text above, and describe your gem
-
+To make it more powerfull, and run rake tasks every ```week```, ```month```, ```year```, you can use ```Rake Sheduler```
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -22,7 +21,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+  RakeScheduler.daily('db:migrate')
+  
+  RakeScheduler.weekly('invoices:generate')
+  
+  RakeScheduler.yearly('products:discount')
+```
 
 ## Development
 
